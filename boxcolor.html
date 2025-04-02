@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color the Box</title>
+    <style>
+        .box{
+            height: 80px;
+            width: 80px;
+            border:2px solid black;
+            margin: 10px;
+        }
+        .container{
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+        }
+        .first{
+            display: flex;
+        }
+        .firstb{
+            margin-left: 15px;
+        }
+        .btn{
+            margin-top: 17px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="first">
+<div class="firstb">
+<label for="fcolor">First Box Color</label><br>
+<input type="text" id="firstcolor" name="fcolor">
+</div>
+<div class="firstb">
+<label for="scolor">Second Box Color</label><br>
+<input type="text" id="secondcolor" name="scolor">
+</div>
+<div class="firstb">
+<label for="tcolor">Third Box Color</label><br>
+<input type="text" id="thirdcolor" name="tcolor">
+</div>
+<div class="btn">
+<button onclick="changecolor()">Submit</button>
+</div>
+</div>
+<div class="container">
+    <div id="box1" class="box">box1</div>
+    <div id="box2" class="box">box2</div>
+    <div id="box3" class="box">box3</div>
+</div>
+<script>
+    function changecolor(){
+    let a = document.getElementById('box1');
+    let color = document.getElementById('firstcolor').value;
+    a.style.backgroundColor =`${color}`;
+
+    let b = document.getElementById('box2');
+    let color1 = document.getElementById('secondcolor').value;
+    b.style.backgroundColor =`${color1}`;
+
+    let c = document.getElementById('box3');
+    let color2 = document.getElementById('thirdcolor').value;
+    c.style.backgroundColor =`${color2}`;
+}
+</script>
+</body>
+</html>
